@@ -1,4 +1,4 @@
-import { initializeApp, getApps, cert } from 'firebase-admin/app';
+import { initializeApp, getApps, applicationDefault } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import fs from 'fs';
 import path from 'path';
@@ -19,6 +19,7 @@ export function getAdminDb() {
   if (getApps().length === 0) {
     initializeApp({
       projectId: config.projectId,
+      credential: applicationDefault(),
     });
   }
 

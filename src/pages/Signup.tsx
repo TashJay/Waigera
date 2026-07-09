@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router';
 import { createUserWithEmailAndPassword, signInWithPopup, updateProfile } from 'firebase/auth';

@@ -30,9 +30,7 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-background text-white font-sans flex">
       <aside className="w-64 bg-surface border-r border-white/5 flex flex-col">
         <div className="p-6 flex items-center gap-2 border-b border-white/5">
-          <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-            <ShieldCheck className="w-5 h-5 text-background" />
-          </div>
+          <img src="/teddylogo.png" alt="Teddy Cabs Logo" className="w-8 h-8 rounded object-cover" />
           <span className="text-xl font-display font-semibold tracking-wide">
             Teddy <span className="text-primary">Admin</span>
           </span>
@@ -113,7 +111,7 @@ export default function AdminDashboard() {
                 <div key={i} className="p-6 flex items-center justify-between hover:bg-white/5 transition-colors">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-background border border-white/10 flex items-center justify-center">
-                      <User className="w-6 h-6 text-text-secondary" />
+                      <Users className="w-6 h-6 text-text-secondary" />
                     </div>
                     <div>
                       <h4 className="font-medium">Driver {i}</h4>

@@ -1,3 +1,4 @@
+import React from "react";
 import { createContext, useContext, useEffect, useState } from 'react';
 import { User, onAuthStateChanged, signOut as firebaseSignOut } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';

@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Shield, Zap, MapPin, Car, Smartphone, DollarSign, Briefcase, ChevronRight, Navigation2, Star } from "lucide-react";
@@ -9,9 +10,7 @@ export default function LandingPage() {
       <nav className="border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between z-10 sticky top-0 bg-background/80 backdrop-blur-md">
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-              <Car className="w-5 h-5 text-background" />
-            </div>
+            <img src="/teddylogo.png" alt="Teddy Cabs Logo" className="w-8 h-8 rounded object-cover" />
             <span className="text-xl font-display font-semibold tracking-wide text-white">
               Teddy <span className="text-primary">Cabs</span>
             </span>
@@ -232,9 +231,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-                <Car className="w-5 h-5 text-background" />
-              </div>
+              <img src="/teddylogo.png" alt="Teddy Cabs Logo" className="w-8 h-8 rounded object-cover" />
               <span className="text-xl font-display font-semibold tracking-wide text-white">
                 Teddy <span className="text-primary">Cabs</span>
               </span>

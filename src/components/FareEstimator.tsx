@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { APIProvider, useMapsLibrary } from '@vis.gl/react-google-maps';
-import { Navigation2, Loader2 } from 'lucide-react';
+import { Navigation2, Loader2, MapPin } from 'lucide-react';
 
 const API_KEY = process.env.GOOGLE_MAPS_PLATFORM_KEY || (import.meta as any).env?.VITE_GOOGLE_MAPS_PLATFORM_KEY || '';
 
@@ -54,7 +54,12 @@ function EstimatorForm() {
 
   const handleEstimate = async () => {
     if (!pickupLocation || !dropoffLocation) {
-      setError("Please select both pickup and dropoff locations from the dropdown");
+      setError("Please search and select both pickup and dropoff locations from the dropdown");
+      return;
+    }
+    
+    if (pickupLocation.lat === dropoffLocation.lat && pickupLocation.lng === dropoffLocation.lng) {
+      setError("Pickup and dropoff locations cannot be the same");
       return;
     }
     
