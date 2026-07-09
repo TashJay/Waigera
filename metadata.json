@@ -1,0 +1,6 @@
+{
+  "name": "Teddy Cabs",
+  "description": "A premium ride-hailing service in Kenya with M-Pesa integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
