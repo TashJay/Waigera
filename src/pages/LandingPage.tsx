@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Shield, Zap, MapPin, Car, Smartphone, DollarSign, Briefcase, ChevronRight, Navigation2, Star } from "lucide-react";
+import FareEstimator from "../components/FareEstimator";
 
 export default function LandingPage() {
   return (
@@ -83,36 +84,7 @@ export default function LandingPage() {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="z-10"
             >
-              <div className="bg-surface/80 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl">
-                <h3 className="text-2xl font-display font-semibold mb-6">Where to?</h3>
-                <div className="space-y-4 relative">
-                  <div className="absolute left-[23px] top-[24px] bottom-[24px] w-0.5 bg-white/10"></div>
-                  
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
-                      <div className="w-2.5 h-2.5 rounded-full bg-primary"></div>
-                    </div>
-                    <input 
-                      type="text" 
-                      placeholder="Enter pickup location" 
-                      className="w-full bg-background border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-primary transition-colors"
-                    />
-                  </div>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
-                      <Navigation2 className="w-4 h-4 text-primary" />
-                    </div>
-                    <input 
-                      type="text" 
-                      placeholder="Enter destination" 
-                      className="w-full bg-background border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-primary transition-colors"
-                    />
-                  </div>
-                </div>
-                <Link to="/signup" className="mt-6 w-full flex items-center justify-center py-4 bg-primary text-background font-medium rounded-xl hover:bg-primary-light transition-colors text-lg">
-                  See Prices
-                </Link>
-              </div>
+              <FareEstimator />
             </motion.div>
           </div>
         </section>
